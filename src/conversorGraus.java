@@ -12,9 +12,9 @@ public class conversorGraus {
 
     public static void main(String[] args) {
 
-        double degree = askDegree();
-        double convert = convertDegreeToCelsius(degree);
-        printResult(convert);
+        double degree = askFahrenheit();
+        double celsius = convertDegreeToCelsius(degree);
+        printResult(celsius);
 
     }
 
@@ -25,11 +25,11 @@ public class conversorGraus {
 
     private static double convertDegreeToCelsius(double degree) {
 
-      double result = (degree-FAHRENHEIT_VALUE)*5/9;
-      return result;
+      return (degree-FAHRENHEIT_VALUE)*5/9;
+
     }
 
-    private static double askDegree() {
+    private static double askFahrenheit() {
 
         System.out.println("Introdueix els graus en Fahrenheit:");
         Scanner sc = new Scanner(System.in);
